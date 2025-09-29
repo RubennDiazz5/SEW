@@ -1,0 +1,21 @@
+/* Datos personales: Ruben Diaz Zapico uo283204 */
+/* Estilos generales del proyecto MotoGP-Desktop */
+
+/* Especificidad: 001 */
+body {
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    background-color: #F4F4F9;
+    color: #333333;
+}
+
+/* Especificidad: 001 */
+header {
+    /* color hereda de body */
+    background-color: #4A90E2;
+}
+
+/* Especificidad: 002 */
+h1, h2, nav {
+    /* background-color hereda de body */
+    color: #053005;
+}
