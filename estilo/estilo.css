@@ -17,5 +17,5 @@ header {
 /* Especificidad: 002 */
 h1, h2, nav {
     /* background-color hereda de body */
-    color: #ffffff;
+    color: #05302e;
 }
