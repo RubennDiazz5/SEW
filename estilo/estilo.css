@@ -3,19 +3,52 @@
 
 /* Especificidad: 001 */
 body {
-    font-family: 'Roboto', 'Times New Roman', Times, serif;
-    background-color: #F4F4F9;
-    color: #333333;
+    /* Color por defecto */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dddddd;
 }
 
 /* Especificidad: 001 */
 header {
-    /* color hereda de body */
-    background-color: #4A90E2;
+    /* Color por defecto */
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    background-color: #1100ff;
+}
+
+/* Especificidad: 001 */
+h2, h3, h4, h5, h6 {
+    /* Background-color hereda de body */
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    color: #1100ff;
+}
+
+/* Especificidad: 010 */
+.active {
+    /* Background-color hereda de header */
+    color: #ff0000;
+}
+
+/* Especificidad: 012 */
+body > p:first-of-type {
+    font-size: 0.8em;
 }
 
 /* Especificidad: 002 */
-h1, h2, nav {
-    /* background-color hereda de body */
-    color: #05302e;
+header a {
+    /* Background-color hereda de header */
+    text-decoration-line: none;         /* Elimina el subrayado */
+    color: #ffffff;                   /* Color base del enlace */
+    font-weight: bold;                  /* Destaca los enlaces */
+}
+
+/* Especificidad: 022 */
+nav a:hover:not(.active) {           /* Cuando el usuario pasa el ratón por encima y no esta activo el enlace del nav */
+    /* Background-color hereda de header */
+    color: #afa54c;
+    text-decoration-line: underline;    /* Subrayado al pasar el ratón */
+}
+
+/* Especificidad: 022 */
+nav a:hover:is(.active) {           /* Cuando el usuario pasa el ratón por encima y esta activo el enlace del nav */
+    text-decoration-line: underline;    /* Subrayado al pasar el ratón */
 }
