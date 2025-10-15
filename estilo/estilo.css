@@ -25,7 +25,8 @@ h2, h3, h4, h5, h6 {
 /* Especificidad: 010 */
 .active {
     /* Background-color hereda de header */
-    color: #f8cf40;
+    /* color: #f8cf40; */
+    color: #afa54c;
 }
 
 /* Especificidad: 012 */
