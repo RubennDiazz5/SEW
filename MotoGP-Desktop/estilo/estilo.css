@@ -1,0 +1,54 @@
+/* Datos personales: Ruben Diaz Zapico uo283204 */
+/* Estilos generales del proyecto MotoGP-Desktop */
+
+/* Especificidad: 001 */
+body {
+    /* Color por defecto */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dddddd;
+}
+
+/* Especificidad: 001 */
+header {
+    /* Color por defecto */
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    background-color: #1100ff;
+}
+
+/* Especificidad: 001 */
+h2, h3, h4, h5, h6 {
+    /* Background-color hereda de body */
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    color: #1100ff;
+}
+
+/* Especificidad: 010 */
+.active {
+    /* Background-color hereda de header */
+    color: #f8cf40;
+}
+
+/* Especificidad: 012 */
+body > p:first-of-type {
+    font-size: 0.8em;
+}
+
+/* Especificidad: 002 */
+header a {
+    /* Background-color hereda de header */
+    text-decoration-line: none;         /* Elimina el subrayado */
+    color: #ffffff;                   /* Color base del enlace */
+    font-weight: bold;                  /* Destaca los enlaces */
+}
+
+/* Especificidad: 022 */
+nav a:hover:not(.active) {           /* Cuando el usuario pasa el ratón por encima y no esta activo el enlace del nav */
+    /* Background-color hereda de header */
+    color: #afa54c;
+    text-decoration-line: underline;    /* Subrayado al pasar el ratón */
+}
+
+/* Especificidad: 022 */
+nav a:hover:is(.active) {           /* Cuando el usuario pasa el ratón por encima y esta activo el enlace del nav */
+    text-decoration-line: underline;    /* Subrayado al pasar el ratón */
+}

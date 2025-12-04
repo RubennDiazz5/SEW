@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Origen</name>
+      <description>Origen del circuito</description>
+      <Point>
+        <coordinates>-8.631383,37.230351,90</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <name>Ruta Oviedo</name>
+    <Placemark>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>
+          -8.628940,37.234940,95.0
+          -8.630900,37.236400,100.5
+          -8.633100,37.237200,107.0
+          -8.635200,37.236000,113.0
+          -8.636000,37.233800,118.5
+          -8.635200,37.231000,119.0
+          -8.633000,37.229200,115.0
+          -8.631000,37.228200,110.0
+          -8.628800,37.227800,105.0
+          -8.626600,37.228400,100.0
+          -8.625000,37.230000,95.5
+          -8.624500,37.232800,90.0
+          -8.624900,37.235600,84.0
+          -8.626500,37.237800,76.5
+          -8.628400,37.239100,70.0
+          -8.630200,37.239700,66.0
+          -8.632000,37.239300,64.0
+          -8.633600,37.237600,70.0
+          -8.632900,37.235200,78.0
+          -8.631000,37.233940,88.0
+        </coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>5</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>
