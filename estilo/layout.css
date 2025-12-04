@@ -38,4 +38,12 @@ nav {
         width: 100%;
         height: auto;
     }
+
+    /* Especificidad: 003 */
+    article h2 + img {
+        width: 100%;       /* Ancho completo del contenedor */
+        height: auto;      /* Mantiene la proporción */
+        display: block;    /* Elimina espacio inferior por inline-block */
+        margin: 0 auto;    /* Centra la imagen si es necesario */
+    }
 }
