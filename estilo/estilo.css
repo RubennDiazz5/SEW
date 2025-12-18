@@ -44,7 +44,7 @@ header a {
 /* Especificidad: 022 */
 nav a:hover:not(.active) {           /* Cuando el usuario pasa el ratón por encima y no esta activo el enlace del nav */
     /* Background-color hereda de header */
-    color: #afa54c;
+    color: #9b9137;
     text-decoration-line: underline;    /* Subrayado al pasar el ratón */
 }
 
