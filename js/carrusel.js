@@ -9,6 +9,7 @@ class Carrusel {
         this.#busqueda = "Autódromo Internacional do Algarve"
         this.#actual = 0
         this.#maximo = 4
+        this.articleCarrusel = null
         this.intervaloIniciado = false
     }
 
@@ -52,15 +53,18 @@ class Carrusel {
     }
 
     #mostrarFotografias() {
-        let article = $("main article")
-        article.find("img").remove()
-        let imagen = $("<img />")
+        let main = $("main")
+
+        if (!this.articleCarrusel) {
+            this.articleCarrusel = $("<article>")
+                .append($("<h2>").text("Imágenes del circuito Autódromo Internacional do Algarve"))
+                .append($("<img />"))
+                .appendTo(main)
+        }
+
+        this.articleCarrusel.find("img")
             .attr("src", this.fotos[this.#actual].src)
             .attr("alt", "Carrusel de fotos de MotoGP")
-
-        article.append(imagen)
-
-        $("main").append(article)
 
         if (!this.intervaloIniciado) {
             setInterval(this.#cambiarFotografia.bind(this), 3000)

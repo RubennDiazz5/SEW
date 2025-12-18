@@ -27,6 +27,7 @@ class Ciudad {
     }
 
     getInfoSecundariaDOM() {
+        const root = document.querySelector("main section")
         const ul = document.createElement("ul")
 
         const liGent = document.createElement("li")
@@ -37,11 +38,13 @@ class Ciudad {
         liPob.textContent = `Población: ${this.#poblacion}`
         ul.appendChild(liPob)
 
+        root.appendChild(ul)
+
         return ul
     }
 
     showCoordenadas() {
-        const root = document.body
+        const root = document.querySelector("main section")
         const p = document.createElement("p")
 
         if (!this.#coordenadas) {
@@ -93,34 +96,42 @@ class Ciudad {
     }
 
     #procesarJSONCarrera() {
-        const hourly = this.datos.hourly;
-        const daily = this.datos.daily;
+        const hourly = this.datos.hourly
+        const daily = this.datos.daily
 
-        const time = hourly.time;
-        const temperature_2m = hourly.temperature_2m;
-        const apparent_temperature = hourly.apparent_temperature;
-        const relative_humidity_2m = hourly.relative_humidity_2m;
-        const precipitation = hourly.precipitation;
-        const wind_speed_10m = hourly.wind_speed_10m;
-        const wind_direction_10m = hourly.wind_direction_10m;
-        const sunrise = daily.sunrise[0];
-        const sunset = daily.sunset[0];
+        const time = hourly.time
+        const temperature_2m = hourly.temperature_2m
+        const apparent_temperature = hourly.apparent_temperature
+        const relative_humidity_2m = hourly.relative_humidity_2m
+        const precipitation = hourly.precipitation
+        const wind_speed_10m = hourly.wind_speed_10m
+        const wind_direction_10m = hourly.wind_direction_10m
+        const sunrise = daily.sunrise[0]
+        const sunset = daily.sunset[0]
 
-        // const section = document.querySelector("main section");
+        let section = $("main section")
+        let title = $("<p>").text("Meteorologia carrera:")
+        let ul = $("<ul>")
 
-        // const ul = document.createElement("ul");
+        for (let i = 0; i < time.length; i++) {
+            const li = $("<li>").text(
+                `${time[i]} -> 
+                Temp: ${temperature_2m[i]}°C, 
+                Sensación: ${apparent_temperature[i]}°C, 
+                Humedad: ${relative_humidity_2m[i]}%, 
+                Lluvia: ${precipitation[i]} mm, 
+                Viento: ${wind_speed_10m[i]} m/s, 
+                Dir: ${wind_direction_10m[i]}°`
+            )
 
-        // for (let i = 0; i < time.length; i++) {
-        //     const li = document.createElement("li");
-        //     li.textContent = `${time[i]} -> Temp: ${temperature_2m[i]}°C, Sensación: ${apparent_temperature[i]}°C, Humedad: ${relative_humidity_2m[i]}%, Lluvia: ${precipitation[i]} mm, Viento: ${wind_speed_10m[i]} m/s, Dir: ${wind_direction_10m[i]}°`;
-        //     ul.appendChild(li);
-        // }
+            ul.append(li)
+        }
 
-        // const pSun = document.createElement("p");
-        // pSun.textContent = `Salida del sol: ${sunrise}, Puesta del sol: ${sunset}`;
+        const pSun = $("<li>").text(`Salida del sol: ${sunrise}, Puesta del sol: ${sunset}`)
 
-        // section.appendChild(ul);
-        // section.appendChild(pSun);
+        section.append(title)
+        ul.append(pSun)
+        section.append(ul)
     }
 
     getMeteorologiaEntrenos() {
@@ -150,13 +161,13 @@ class Ciudad {
     }
 
     #procesarJSONEntrenos() {
-        const hourly = this.datos.hourly;
+        const hourly = this.datos.hourly
 
-        const time = hourly.time;  // Array de timestamps
-        const temperature_2m = hourly.temperature_2m;
-        const relative_humidity_2m = hourly.relative_humidity_2m;
-        const precipitation = hourly.precipitation;
-        const wind_speed_10m = hourly.wind_speed_10m;
+        const time = hourly.time  // Array de timestamps
+        const temperature_2m = hourly.temperature_2m
+        const relative_humidity_2m = hourly.relative_humidity_2m
+        const precipitation = hourly.precipitation
+        const wind_speed_10m = hourly.wind_speed_10m
 
         const dias = [...new Set(time.map(t => t.split('T')[0]))]
 
@@ -182,7 +193,24 @@ class Ciudad {
             })
         })
 
-        console.log(mediasPorDia)
+        let section = $("main section")
+
+        let title = $("<p>").text("Meteorología entrenos:")
+        let ul = $("<ul>")
+
+        mediasPorDia.forEach(dia => {
+            const li = $("<li>").text(
+                `${dia.dia} → ` +
+                `Temp media: ${dia.temperatura}°C, ` +
+                `Humedad: ${dia.humedad}%, ` +
+                `Lluvia: ${dia.lluvia} mm, ` +
+                `Viento: ${dia.viento} m/s`
+            )
+            ul.append(li)
+        })
+
+        section.append(title)
+        section.append(ul)
     }
     
 }
@@ -199,7 +227,7 @@ portimao.rellenarDatos(
 )
 
 // Contenedor raíz
-const root = document.body
+const root = document.querySelector("main section")
 
 // --- Ciudad ---
 let pCiudad = document.createElement("p")
