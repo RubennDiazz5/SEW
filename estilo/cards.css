@@ -29,14 +29,15 @@ main article[data-estado=revelada] {
 /* Reglas con los estilos generales para el encabezado y la imagen de la carta */
 /* especificidad: 002 */
 /* especificidad: 002 */
-article h3,
-article img {
+article h3, article img {
+    /* Color heredado de estilo.css -> h3 */
     width: 100%;
     height: 100%;
     position: absolute;
     border-radius: 0.5em;
     background: #1C7CCC;
     backface-visibility: hidden;
+    color: #dc143c;
 }
 
 /* Regla para centrar el texto "Memory Card" vertical y horizontalmente en cada carta */

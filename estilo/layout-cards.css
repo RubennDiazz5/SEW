@@ -8,6 +8,7 @@ main {
     grid-template-rows: auto repeat(3, 1fr);    /* 3 filas */
     gap: 1em;                                   /* Separación entre cartas */
     max-width: 60em;                            /* Ancho máximo del área de juego */
+    max-height: 0em;                            /* Alto máximo del área de juego */
 }
 
 /*  Especificidad: 002 */
@@ -22,13 +23,13 @@ main p {
     grid-column: 1 / -1;        /* ocupa todas las columnas */
     text-align: center;
     font-size: 1.5em;
-    margin: 0.5em 0 1em 0;
 }
 
 @media (min-width: 320px) and (max-width: 799px) {
     /* Especificidad: 001 */
     main {
-        grid-template-columns: repeat(2, 1fr);      /* 2 columnas */
-        grid-template-rows: auto repeat(6, 1fr);    /* 6 filas */
+        grid-template-columns: repeat(2, 1fr);      /* 2 columnas, genera warning al redefinir la propiedad grid-template-columns del main */
+        grid-template-rows: auto repeat(6, 1fr);    /* 6 filas, genera warning al redefinir la propiedad grid-template-rows del main */
+        max-width: 10em;                            /* Ancho máximo del área de juego, genera warning al redefinir la propiedad max-width del main */
     }
 }

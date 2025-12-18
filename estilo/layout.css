@@ -36,7 +36,6 @@ nav {
     /* Especificidad: 001 */
     video, audio {
         width: 100%;
-        height: auto;
     }
 
     /* Especificidad: 003 */
