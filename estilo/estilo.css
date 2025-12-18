@@ -26,6 +26,7 @@ h2, h3, h4, h5, h6 {
 .active {
     /* Background-color hereda de header */
     color: #f8cf40;
+    text-decoration-line: underline;
 }
 
 /* Especificidad: 012 */
@@ -44,8 +45,7 @@ header a {
 /* Especificidad: 022 */
 nav a:hover:not(.active) {           /* Cuando el usuario pasa el ratón por encima y no esta activo el enlace del nav */
     /* Background-color hereda de header */
-    color: #9b9137;
-    text-decoration-line: underline;    /* Subrayado al pasar el ratón */
+    color: #f8cf40;
 }
 
 /* Especificidad: 022 */
