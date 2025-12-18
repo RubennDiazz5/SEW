@@ -10,14 +10,15 @@ class Memoria {
         this.#tableroBloqueado = true
         this.#primera = null
         this.#segunda = null
-
-        this.#barajarCartas()
-
-        this.#tableroBloqueado = false
-
         this.#cronometro = new Cronometro()
+    }
+
+    iniciarJuego() {
+        this.#barajarCartas()
+        this.#tableroBloqueado = false
         this.#cronometro.arrancar()
     }
+
 
     voltearCarta(carta) {
         if (this.#tableroBloqueado ||
@@ -44,8 +45,10 @@ class Memoria {
         const cartas = [...cont.children].filter(x => x.tagName === "ARTICLE")
 
         for (let i = cartas.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1))
-            [cartas[i], cartas[j]] = [cartas[j], cartas[i]]
+            let j = Math.floor(Math.random() * (i + 1))
+            const temp = cartas[i]
+            cartas[i] = cartas[j]
+            cartas[j] = temp
         }
 
         cartas.forEach(c => cont.appendChild(c))
@@ -75,12 +78,12 @@ class Memoria {
         }
     }
 
-    #cubrirCartas() {
+    #cubrirCartas(primera, segunda) {
         this.#tableroBloqueado = true
 
         setTimeout(() => {
-            this.#primera.removeAttribute("data-estado")
-            this.#segunda.removeAttribute("data-estado")
+            primera.removeAttribute("data-estado")
+            segunda.removeAttribute("data-estado")
 
             this.#reiniciarJugada()
         }, 1500)
@@ -90,16 +93,19 @@ class Memoria {
         const img1 = this.#primera.children[1].src
         const img2 = this.#segunda.children[1].src
 
-        (img1 === img2)
-            ? this.#deshabilitarCartas()
-            : this.#cubrirCartas()
+        if (img1 === img2) {
+            this.#deshabilitarCartas()
+        } else {
+            this.#cubrirCartas(this.#primera, this.#segunda)
+        }
     }
 
 }
 
-const juegoMemoria = new Memoria()
-
 window.addEventListener("DOMContentLoaded", () => {
+    const juegoMemoria = new Memoria()
+    juegoMemoria.iniciarJuego()
+
     const cartas = document.querySelectorAll("main article")
 
     for (const carta of cartas) {
