@@ -37,7 +37,7 @@ article h3, article img {
     border-radius: 0.5em;
     background: #1C7CCC;
     backface-visibility: hidden;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Regla para centrar el texto "Memory Card" vertical y horizontalmente en cada carta */
