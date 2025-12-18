@@ -27,7 +27,6 @@ class Ciudad {
     }
 
     getInfoSecundariaDOM() {
-        const root = document.querySelector("main section")
         const ul = document.createElement("ul")
 
         const liGent = document.createElement("li")
@@ -37,8 +36,6 @@ class Ciudad {
         const liPob = document.createElement("li")
         liPob.textContent = `Población: ${this.#poblacion}`
         ul.appendChild(liPob)
-
-        root.appendChild(ul)
 
         return ul
     }
@@ -90,7 +87,7 @@ class Ciudad {
             },
             error: function() {
                 let error = $("<p>").text("ERROR CARRERA")
-                $("body").append(error)
+                $("main").append(error)
             }
         })
     }
@@ -109,8 +106,8 @@ class Ciudad {
         const sunrise = daily.sunrise[0]
         const sunset = daily.sunset[0]
 
-        let section = $("main section")
-        let title = $("<p>").text("Meteorologia carrera:")
+        let section = $("<section>")
+        let title = $("<h2>").text("Meteorologia carrera:")
         let ul = $("<ul>")
 
         for (let i = 0; i < time.length; i++) {
@@ -132,6 +129,7 @@ class Ciudad {
         section.append(title)
         ul.append(pSun)
         section.append(ul)
+        $("main").append(section)
     }
 
     getMeteorologiaEntrenos() {
@@ -155,7 +153,7 @@ class Ciudad {
             },
             error: function() {
                 let error = $("<p>").text("ERROR ENTRENOS")
-                $("body").append(error)
+                $("main").append(error)
             }
         })
     }
@@ -193,9 +191,9 @@ class Ciudad {
             })
         })
 
-        let section = $("main section")
+        let section = $("<section>")
 
-        let title = $("<p>").text("Meteorología entrenos:")
+        let title = $("<h2>").text("Meteorología entrenos:")
         let ul = $("<ul>")
 
         mediasPorDia.forEach(dia => {
@@ -211,6 +209,7 @@ class Ciudad {
 
         section.append(title)
         section.append(ul)
+        $("main").append(section)
     }
     
 }
@@ -227,25 +226,31 @@ portimao.rellenarDatos(
 )
 
 // Contenedor raíz
-const root = document.querySelector("main section")
+const main = document.querySelector("main")
+let article = document.createElement("section")
+let title = document.createElement("h2")
+
+title.textContent = "Meteorología de MotoGP-Desktop"
+article.appendChild(title)
 
 // --- Ciudad ---
 let pCiudad = document.createElement("p")
 pCiudad.textContent = "Ciudad: " + portimao.getCiudad()
-root.appendChild(pCiudad)
+article.appendChild(pCiudad)
 
 // --- País ---
 let pPais = document.createElement("p")
 pPais.textContent = "País: " + portimao.getPais()
-root.appendChild(pPais)
+article.appendChild(pPais)
 
 // --- Información ---
 let pInfo = document.createElement("p")
 pInfo.textContent = "Información:"
-root.appendChild(pInfo)
+article.appendChild(pInfo)
 
 // Inserción del <ul> generado por el método
-root.appendChild(portimao.getInfoSecundariaDOM())
+article.appendChild(portimao.getInfoSecundariaDOM())
+main.appendChild(article)
 
 // --- Coordenadas ---
 portimao.showCoordenadas()

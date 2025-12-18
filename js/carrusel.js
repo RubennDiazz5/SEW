@@ -29,8 +29,8 @@ class Carrusel {
                 this.#procesarJSONFotografias()
             },
             error: function() {
-                let error = $("<p>").text("ERROR")
-                $("body").append(error)
+                let error = $("<p>").text("ERROR CARRUSEL")
+                $("main").append(error)
             }
         })
     }
