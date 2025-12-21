@@ -86,6 +86,28 @@ def main():
         '#ff0000ff',
         "5"
     )
+
+    primeraLinea = [listaCoordenadasOrigen[0], listaCoordenadasTramos[0]]
+    archivoKML.addLineString(
+        "Origen → Primer tramo",
+        "1",
+        "1",
+        "\n".join(primeraLinea),
+        'relativeToGround',
+        '#ff0000ff',
+        "5"
+    )
+
+    ultimaLinea = [listaCoordenadasTramos[-1], listaCoordenadasOrigen[0]]
+    archivoKML.addLineString(
+        "Último tramo → Origen",
+        "1",
+        "1",
+        "\n".join(ultimaLinea),
+        'relativeToGround',
+        '#ff0000ff',
+        "5"
+    )
     
     archivoKML.escribir(nombreKML)
     print("Creado el archivo: ", nombreKML)

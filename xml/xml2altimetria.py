@@ -13,32 +13,15 @@ class Svg(object):
             print("Error procesando en el archivo XML = ", archivo)
             exit()
 
-        self.raiz = ET.Element('svg', xmlns="http://www.w3.org/2000/svg")
-
-    def addRect(self,x,y,width,height,fill, strokeWidth,stroke):
-        ET.SubElement(
-            self.raiz,
-            'rect',
-            x=x,
-            y=y,
-            width=width,
-            height=height,
-            fill=fill, 
-            strokeWidth=strokeWidth,
-            stroke=stroke
-        )
-
-    def addCircle(self, cx, cy, r, fill):
-        ET.SubElement(
-            self.raiz,
-            'circle',
-            cx=cx,
-            cy=cy,
-            r=r,
-            fill=fill
+        self.raiz = ET.Element(
+            'svg', 
+            xmlns="http://www.w3.org/2000/svg",
+            width="800",
+            height="450",
+            viewBox="0 0 800 450"
         )
         
-    def addLine(self, x1, y1, x2, y2, stroke, strokeWith):
+    def addLine(self, x1, y1, x2, y2, stroke, strokeWidth):
         ET.SubElement(
             self.raiz,
             'line',
@@ -47,69 +30,88 @@ class Svg(object):
             x2=x2,
             y2=y2,
             stroke=stroke,
-            strokeWith=strokeWith
+            **{'stroke-width': strokeWidth}  # CORREGIDO**
         )
 
-    def addPolyline(self, points, stroke, strokeWith, fill):
+    def addPolyline(self, points, stroke, strokeWidth, fill):
         ET.SubElement(
             self.raiz,
             'polyline',
             points=points,
             stroke=stroke,
-            strokeWith=strokeWith,
+            **{'stroke-width': strokeWidth},  # CORREGIDO
             fill=fill
         )
-        
+
     def addText(self, texto, x, y, fontFamily, fontSize, style):
         ET.SubElement(
             self.raiz,
             'text',
             x=x,
             y=y,
-            fontFamily=fontFamily,
-            fontSize=fontSize,
+            **{'font-family': fontFamily},   # CORREGIDO
+            **{'font-size': fontSize},       # CORREGIDO
             style=style
-        ).text=texto
+        ).text = texto
 
     def escribir(self,nombreArchivoSVG):
         arbolSVG = ET.ElementTree(self.raiz)
         ET.indent(arbolSVG)
         arbolSVG.write(nombreArchivoSVG, encoding='utf-8', xml_declaration=True)
-    
-    def ver(self):
-        print("\nElemento raiz = ", self.raiz.tag)
-
-        if self.raiz.text != None:
-            print("Contenido = "    , self.raiz.text.strip('\n'))
-        else:
-            print("Contenido = "    , self.raiz.text)
-        
-        print("Atributos = "    , self.raiz.attrib)
-
-        # Recorrido de los elementos del árbol
-        for hijo in self.raiz.findall('.//'):
-            print("\nElemento = " , hijo.tag)
-            if hijo.text != None:
-                print("Contenido = ", hijo.text.strip('\n'))
-            else:
-                print("Contenido = ", hijo.text)    
-            print("Atributos = ", hijo.attrib)
 
 def main():
     archivoXML = input('Introduzca un archivo XML = ')
     nombreSVG = "altimetria.svg"
+    ns = {'ns': 'http://www.uniovi.es'}
 
     archivoSVG = Svg(archivoXML)
 
-    puntos="50,150 50,200 200,200 200,100"
-    archivoSVG.addRect('25','25','200','200','lime','4','pink')
-    archivoSVG.addCircle('125','125','75','orange')
-    archivoSVG.addLine('50','50','200','200','blue','4')
-    archivoSVG.addPolyline(puntos,'red','4','none') 
-    archivoSVG.addText('texto vertical','220','25','Verdana','55', 
-                       "writing-mode: tb; glyph-orientation-vertical: 0;")
-    archivoSVG.addText('texto horizontal','30','35','Verdana','55',"none")
-    archivoSVG.ver()
+    tramos = archivoSVG.arbolXML.findall('.//ns:tramo', ns)
+
+    alt_origen = float(
+        archivoSVG.arbolXML.find(
+            './/ns:origen/ns:coordenadas/ns:altitud', ns
+        ).text
+    )
+
+    dist_acumulada = 0
+    distancias = [0]
+    altitudes = [alt_origen]
+
+    for tramo in tramos:
+        d = float(tramo.find('ns:distancia', ns).text)
+        a = float(tramo.find('ns:coordenadas/ns:altitud', ns).text)
+
+        dist_acumulada += d
+        distancias.append(dist_acumulada)
+        altitudes.append(a)
+
+    ancho = 800
+    alto = 400
+    margen = 50
+
+    max_dist = max(distancias)
+    min_alt = min(altitudes)
+    max_alt = max(altitudes)
+
+    puntos = ""
+
+    for d, a in zip(distancias, altitudes):
+        x = margen + (d / max_dist) * (ancho - 2 * margen)
+        y = alto - margen - ((a - min_alt) / (max_alt - min_alt)) * (alto - 2 * margen)
+        puntos += f"{x},{y} "
+
+    puntos += f"{ancho - margen},{alto - margen} "
+    puntos += f"{margen},{alto - margen}"
+
+    archivoSVG.addLine(str(margen), str(margen), str(margen), str(alto - margen), "black", "2")
+    archivoSVG.addLine(str(margen), str(alto - margen), str(ancho - margen), str(alto - margen), "black", "2")
+
+    archivoSVG.addText("Altitud (m)", "15", "200", "Verdana", "14",
+                "writing-mode: tb; glyph-orientation-vertical: 0;")
+    archivoSVG.addText("Distancia (m)", "350", "390", "Verdana", "14", "none")
+
+    archivoSVG.addPolyline(puntos, "blue", "2", "lightblue")
 
     archivoSVG.escribir(nombreSVG)
     print("Creado el archivo: ", nombreSVG)

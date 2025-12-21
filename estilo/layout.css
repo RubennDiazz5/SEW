@@ -16,6 +16,13 @@ nav {
     flex-wrap: wrap;                    /* Permite que los enlaces se acomoden si no caben */
 }
 
+/* Especificidad: 013 */
+main > section:last-of-type > div {
+    width: 50%;
+    height: 30em;
+    border: 1px solid #ccc;
+}
+
 @media (min-width: 320px) and (max-width: 799px) {
     /* Especificidad: 001 */
     header {
@@ -44,5 +51,12 @@ nav {
         height: auto;      /* Mantiene la proporción */
         display: block;    /* Elimina espacio inferior por inline-block */
         margin: 0 auto;    /* Centra la imagen si es necesario */
+    }
+
+    /* Especificidad: 013 */
+    main > section:last-of-type > div {
+        width: 50%;         /* Genera warning al redefinir la propiedad width del main > section:last-of-type > div */
+        height: 20em;       /* Genera warning al redefinir la propiedad height del main > section:last-of-type > div */
+        margin: 0;
     }
 }

@@ -3,29 +3,25 @@
 
 /* Especificidad: 001 */
 body {
-    /* Color por defecto */
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #dddddd;
+    background-color: #dddddd; /* Color por defecto */
 }
 
 /* Especificidad: 001 */
 header {
-    /* Color por defecto */
     font-family: 'Roboto', 'Times New Roman', Times, serif;
-    background-color: #1100ff;
+    background-color: #1100ff; /* Color por defecto */
 }
 
 /* Especificidad: 001 */
 h2, h3, h4, h5, h6 {
-    /* Background-color hereda de body */
     font-family: 'Roboto', 'Times New Roman', Times, serif;
-    color: #1100ff;
+    color: #1100ff; /* Background-color hereda de body */
 }
 
 /* Especificidad: 010 */
 .active {
-    /* Background-color hereda de header */
-    color: #f8cf40;
+    color: #f8cf40; /* Background-color hereda de header */
     text-decoration-line: underline;
 }
 
@@ -35,17 +31,16 @@ body > p:first-of-type {
 }
 
 /* Especificidad: 002 */
-header a {
-    /* Background-color hereda de header */
+/* Especificidad: 001 */
+header a, h1 {
     text-decoration-line: none;         /* Elimina el subrayado */
-    color: #ffffff;                   /* Color base del enlace */
+    color: #ffffff;                   /* Color base del enlace y h1, Background-color hereda de header */
     font-weight: bold;                  /* Destaca los enlaces */
 }
 
 /* Especificidad: 022 */
 nav a:hover:not(.active) {           /* Cuando el usuario pasa el ratón por encima y no esta activo el enlace del nav */
-    /* Background-color hereda de header */
-    color: #f8cf40;
+    color: #f8cf40; /* Background-color hereda de header */
 }
 
 /* Especificidad: 022 */
