@@ -76,7 +76,7 @@ $clasificacion = new Clasificacion();
     <p>Estás en: <a href="index.html" title="Inicio de la página web">Inicio</a> | <strong>Clasificaciones</strong></p>
 
     <main>
-        <h2>Clasificaciones de MotoGP-Desktop</h2>
+        <h2>Clasificaciones de Autódromo Internacional do Algarve 2025</h2>
 
         <?php
             $clasificacion->mostrarGanador();

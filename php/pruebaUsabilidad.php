@@ -17,7 +17,7 @@ function guardarResultadoEnBD($tiempo) {
     );
 
     $id_usuario = $_SESSION["id_usuario"];
-    $dispositivo = "Ordenador";
+    $dispositivo = "Tableta";
     $completado = true;
 
     $stmt->bind_param(
@@ -215,9 +215,10 @@ if (isset($_POST["guardar_observacion"])) {
 
                     <!-- Pregunta 4 -->
                     <p>
-                        <label>4. ¿Qué tipo de información muestra el documento de meteorología?</label>
+                        <label>4. ¿La información meteorológica es clara y útil para entender las condiciones de la carrera?</label>
                         <input type="text" name="p4" required>
                     </p>
+
 
                     <!-- Pregunta 5 -->
                     <p>
@@ -237,17 +238,19 @@ if (isset($_POST["guardar_observacion"])) {
 
                     <!-- Pregunta 7 -->
                     <p>
-                        <label>7. ¿El diseño es responsive?</label>
+                        <label>7. ¿La navegación entre las distintas secciones de la aplicación resulta intuitiva?</label>
                         <select name="p7" required>
                             <option value="">Seleccione una opción</option>
-                            <option value="Sí">Sí</option>
-                            <option value="No">No</option>
+                            <option value="Muy intuitiva">Muy intuitiva</option>
+                            <option value="Intuitiva">Intuitiva</option>
+                            <option value="Poco intuitiva">Poco intuitiva</option>
+                            <option value="Nada intuitiva">Nada intuitiva</option>
                         </select>
                     </p>
 
                     <!-- Pregunta 8 -->
                     <p>
-                        <label>8. ¿Qué sección muestra información multimedia?</label>
+                        <label>8. ¿Qué sección muestra fotografias y videos?</label>
                         <input type="text" name="p8" required>
                     </p>
 
