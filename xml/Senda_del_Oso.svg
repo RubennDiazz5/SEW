@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <line x1="80" y1="80" x2="80" y2="520" stroke="black" stroke-width="2" />
+  <line x1="80" y1="520" x2="920" y2="520" stroke="black" stroke-width="2" />
+  <line x1="80.0" y1="520" x2="80.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="60.0" y="550" font-size="14" font-family="Verdana">0 m</text>
+  <line x1="248.0" y1="520" x2="248.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="228.0" y="550" font-size="14" font-family="Verdana">4000 m</text>
+  <line x1="416.0" y1="520" x2="416.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="396.0" y="550" font-size="14" font-family="Verdana">8000 m</text>
+  <line x1="584.0" y1="520" x2="584.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="564.0" y="550" font-size="14" font-family="Verdana">12000 m</text>
+  <line x1="752.0" y1="520" x2="752.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="732.0" y="550" font-size="14" font-family="Verdana">16000 m</text>
+  <line x1="920.0" y1="520" x2="920.0" y2="530" stroke="black" stroke-width="2" />
+  <text x="900.0" y="550" font-size="14" font-family="Verdana">20000 m</text>
+  <line x1="70" y1="520.0" x2="80" y2="520.0" stroke="black" stroke-width="2" />
+  <text x="10" y="525.0" font-size="14" font-family="Verdana">70 m</text>
+  <line x1="70" y1="432.0" x2="80" y2="432.0" stroke="black" stroke-width="2" />
+  <text x="10" y="437.0" font-size="14" font-family="Verdana">108 m</text>
+  <line x1="70" y1="344.0" x2="80" y2="344.0" stroke="black" stroke-width="2" />
+  <text x="10" y="349.0" font-size="14" font-family="Verdana">146 m</text>
+  <line x1="70" y1="256.0" x2="80" y2="256.0" stroke="black" stroke-width="2" />
+  <text x="10" y="261.0" font-size="14" font-family="Verdana">184 m</text>
+  <line x1="70" y1="168.0" x2="80" y2="168.0" stroke="black" stroke-width="2" />
+  <text x="10" y="173.0" font-size="14" font-family="Verdana">222 m</text>
+  <line x1="70" y1="80.0" x2="80" y2="80.0" stroke="black" stroke-width="2" />
+  <text x="10" y="85.0" font-size="14" font-family="Verdana">260 m</text>
+  <polyline points="80.0,334.7368421052632 80.0,520.0 206.0,473.6842105263158 332.0,404.2105263157895 416.0,357.89473684210526 437.0,346.3157894736842 584.0,288.42105263157896 752.0,172.63157894736844 920.0,80.0 920,520 80,520" stroke="blue" stroke-width="3" fill="lightblue" />
+  <text x="350" y="40" font-size="14" font-family="Verdana">Altimetría - Senda del Oso</text>
+</svg>

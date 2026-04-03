@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rutas
+    xmlns="http://www.uniovi.es"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
+
+    <ruta>
+        <nombre>Ruta del Cares</nombre>
+        <tipo>Senderismo</tipo>
+        <transporte>A pie</transporte>
+        <duracion>6 horas</duracion>
+        <agencia>NaturaTur</agencia>
+        <descripcion>
+            Espectacular ruta de senderismo entre Poncebos y Caín atravesando los Picos de Europa por la conocida Garganta del Cares.
+        </descripcion>
+        <personasAdecuadas>Personas en buena forma física</personasAdecuadas>
+        <lugarInicio>Poncebos</lugarInicio>
+        <direccionInicio>Arenas de Cabrales</direccionInicio>
+        <coordenadas>
+            <longitud>-4.8136</longitud>
+            <latitud>43.2641</latitud>
+            <altitud>218</altitud>
+        </coordenadas>
+        <referencias>
+            <referencia>https://www.turismoasturias.es</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Ruta_del_Cares</referencia>
+            <referencia>https://www.parquenacionalpicoseuropa.es</referencia>
+        </referencias>
+        <recomendacion>10</recomendacion>
+        <hitos>
+            <hito>
+                <nombre>Poncebos</nombre>
+                <descripcion>Inicio tradicional de la ruta del Cares.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8136</longitud>
+                    <latitud>43.2641</latitud>
+                    <altitud>218</altitud>
+                </coordenadas>
+                <distancia unidades="km">0</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Poncebos1.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Mirador del Tombo</nombre>
+                <descripcion>Primeras vistas del desfiladero del Cares.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8205</longitud>
+                    <latitud>43.2585</latitud>
+                    <altitud>260</altitud>
+                </coordenadas>
+                <distancia unidades="km">1.5</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/MiradorTombo.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Puente de los Rebecos</nombre>
+                <descripcion>Puente colgante con vistas impresionantes del desfiladero.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8290</longitud>
+                    <latitud>43.2500</latitud>
+                    <altitud>300</altitud>
+                </coordenadas>
+                <distancia unidades="km">3</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/PuenteRebecos.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Los Collaos</nombre>
+                <descripcion>Zona panorámica del recorrido.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8500</longitud>
+                    <latitud>43.2400</latitud>
+                    <altitud>350</altitud>
+                </coordenadas>
+                <distancia unidades="km">5</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Collaos.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Túneles del Cares</nombre>
+                <descripcion>Tramo excavado en la roca con varios túneles artificiales.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8605</longitud>
+                    <latitud>43.2350</latitud>
+                    <altitud>380</altitud>
+                </coordenadas>
+                <distancia unidades="km">7</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/TunelesCares.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Canal del Cares</nombre>
+                <descripcion>Impresionante paso excavado en la roca sobre el río Cares.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8700</longitud>
+                    <latitud>43.2300</latitud>
+                    <altitud>400</altitud>
+                </coordenadas>
+                <distancia unidades="km">9</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/CanalCares.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Puente Bolín</nombre>
+                <descripcion>Puente cercano a la llegada a Caín.</descripcion>
+                <coordenadas>
+                    <longitud>-4.8895</longitud>
+                    <latitud>43.2205</latitud>
+                    <altitud>440</altitud>
+                </coordenadas>
+                <distancia unidades="km">11</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/PuenteBolin.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Caín</nombre>
+                <descripcion>Final de la ruta en el pueblo leonés.</descripcion>
+                <coordenadas>
+                    <longitud>-4.9000</longitud>
+                    <latitud>43.2100</latitud>
+                    <altitud>460</altitud>
+                </coordenadas>
+                <distancia unidades="km">12</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Cain.jpg</foto>
+                </galeriaFotos>
+            </hito>
+        </hitos>
+        <planimetria>Ruta_del_Cares.kml</planimetria>
+        <altimetria>Ruta_del_Cares.svg</altimetria>
+    </ruta>
+
+    <ruta>
+        <nombre>Ruta del Naranco</nombre>
+        <tipo>Arquitectura y monumentos</tipo>
+        <transporte>A pie</transporte>
+        <duracion>3 horas</duracion>
+        <agencia>Sin agencia</agencia>
+        <descripcion>
+            Recorrido cultural por los monumentos prerrománicos del Monte Naranco en Oviedo.
+        </descripcion>
+        <personasAdecuadas>Se puede ir con niños</personasAdecuadas>
+        <lugarInicio>Monte Naranco</lugarInicio>
+        <direccionInicio>Oviedo</direccionInicio>
+        <coordenadas>
+            <longitud>-5.8448</longitud>
+            <latitud>43.3840</latitud>
+            <altitud>300</altitud>
+        </coordenadas>
+        <referencias>
+            <referencia>https://www.turismoasturias.es</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Santa_Mar%C3%ADa_del_Naranco</referencia>
+            <referencia>https://www.oviedo.es</referencia>
+        </referencias>
+        <recomendacion>9</recomendacion>
+        <hitos>
+            <hito>
+                <nombre>Área Recreativa del Naranco</nombre>
+                <descripcion>Zona verde con mesas y área de descanso.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8465</longitud>
+                    <latitud>43.3865</latitud>
+                    <altitud>350</altitud>
+                </coordenadas>
+                <distancia unidades="km">0.6</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/AreaRecreativa.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Curva del Ascenso</nombre>
+                <descripcion>Tramo de subida con vistas parciales a Oviedo.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8475</longitud>
+                    <latitud>43.3875</latitud>
+                    <altitud>420</altitud>
+                </coordenadas>
+                <distancia unidades="km">0.9</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/CurvaAscenso.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Fuente del Naranco</nombre>
+                <descripcion>Pequeña fuente natural en el sendero.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8485</longitud>
+                    <latitud>43.3888</latitud>
+                    <altitud>470</altitud>
+                </coordenadas>
+                <distancia unidades="km">1.2</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/FuenteNaranco.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Mirador Intermedio</nombre>
+                <descripcion>Punto panorámico antes de la cima.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8492</longitud>
+                    <latitud>43.3895</latitud>
+                    <altitud>520</altitud>
+                </coordenadas>
+                <distancia unidades="km">1.5</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/MiradorIntermedio.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Pico del Naranco</nombre>
+                <descripcion>Cota más alta del monte Naranco.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8510</longitud>
+                    <latitud>43.3910</latitud>
+                    <altitud>632</altitud>
+                </coordenadas>
+                <distancia unidades="km">1.8</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/PicoNaranco.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Descenso Norte</nombre>
+                <descripcion>Tramo de bajada hacia la vertiente norte.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8490</longitud>
+                    <latitud>43.3902</latitud>
+                    <altitud>540</altitud>
+                </coordenadas>
+                <distancia unidades="km">2.2</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/DescensoNorte.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Sendero Boscoso</nombre>
+                <descripcion>Tramo rodeado de vegetación autóctona.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8470</longitud>
+                    <latitud>43.3885</latitud>
+                    <altitud>430</altitud>
+                </coordenadas>
+                <distancia unidades="km">2.6</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/SenderoBosque.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Regreso a Santa María</nombre>
+                <descripcion>Último tramo antes de cerrar la ruta circular.</descripcion>
+                <coordenadas>
+                    <longitud>-5.8455</longitud>
+                    <latitud>43.3855</latitud>
+                    <altitud>330</altitud>
+                </coordenadas>
+                <distancia unidades="km">3</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Regreso.jpg</foto>
+                </galeriaFotos>
+            </hito>
+        </hitos>
+        <planimetria>Ruta_del_Naranco.kml</planimetria>
+        <altimetria>Ruta_del_Naranco.svg</altimetria>
+    </ruta>
+
+    <ruta>
+        <nombre>Senda del Oso</nombre>
+        <tipo>Paisajística</tipo>
+        <transporte>Bicicleta</transporte>
+        <duracion>5 horas</duracion>
+        <agencia>AventuraAstur</agencia>
+        <descripcion>
+            Ruta cicloturista por antiguos trazados ferroviarios atravesando valles y túneles.
+        </descripcion>
+        <personasAdecuadas>Se puede ir con niños</personasAdecuadas>
+        <lugarInicio>Tuñón</lugarInicio>
+        <direccionInicio>Santo Adriano</direccionInicio>
+        <coordenadas>
+            <longitud>-6.0100</longitud>
+            <latitud>43.2500</latitud>
+            <altitud>150</altitud>
+        </coordenadas>
+        <referencias>
+            <referencia>https://www.sendadeloso.org</referencia>
+            <referencia>https://es.wikipedia.org/wiki/Senda_del_Oso</referencia>
+            <referencia>https://www.turismoasturias.es</referencia>
+        </referencias>
+        <recomendacion>9</recomendacion>
+        <hitos>
+            <hito>
+                <nombre>Tuñón</nombre>
+                <descripcion>Inicio habitual de la Senda del Oso.</descripcion>
+                <coordenadas>
+                    <longitud>-5.9645</longitud>
+                    <latitud>43.2730</latitud>
+                    <altitud>70</altitud>
+                </coordenadas>
+                <distancia unidades="km">0</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Tunon.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Desfiladero de Peñas Juntas</nombre>
+                <descripcion>Tramo encajonado entre montañas junto al río Trubia.</descripcion>
+                <coordenadas>
+                    <longitud>-5.9800</longitud>
+                    <latitud>43.2650</latitud>
+                    <altitud>90</altitud>
+                </coordenadas>
+                <distancia unidades="km">3</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/PenasJuntas.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Área Recreativa de Buyera</nombre>
+                <descripcion>Zona de descanso junto al embalse de Valdemurio.</descripcion>
+                <coordenadas>
+                    <longitud>-5.9950</longitud>
+                    <latitud>43.2500</latitud>
+                    <altitud>120</altitud>
+                </coordenadas>
+                <distancia unidades="km">6</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Buyera.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Proaza</nombre>
+                <descripcion>Localidad famosa por la Casa del Oso.</descripcion>
+                <coordenadas>
+                    <longitud>-6.0150</longitud>
+                    <latitud>43.2500</latitud>
+                    <altitud>140</altitud>
+                </coordenadas>
+                <distancia unidades="km">8</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Proaza.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Casa del Oso</nombre>
+                <descripcion>Centro de interpretación del oso pardo cantábrico.</descripcion>
+                <coordenadas>
+                    <longitud>-6.0165</longitud>
+                    <latitud>43.2515</latitud>
+                    <altitud>145</altitud>
+                </coordenadas>
+                <distancia unidades="km">8.5</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/CasaOso.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Caranga de Abajo</nombre>
+                <descripcion>Enlace hacia el ramal de Teverga.</descripcion>
+                <coordenadas>
+                    <longitud>-6.0400</longitud>
+                    <latitud>43.2400</latitud>
+                    <altitud>170</altitud>
+                </coordenadas>
+                <distancia unidades="km">12</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Caranga.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Túneles de la Senda</nombre>
+                <descripcion>Antiguos túneles ferroviarios acondicionados.</descripcion>
+                <coordenadas>
+                    <longitud>-6.0600</longitud>
+                    <latitud>43.2300</latitud>
+                    <altitud>220</altitud>
+                </coordenadas>
+                <distancia unidades="km">16</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/TunelesSenda.jpg</foto>
+                </galeriaFotos>
+            </hito>
+
+            <hito>
+                <nombre>Entrago</nombre>
+                <descripcion>Final del ramal principal en Teverga.</descripcion>
+                <coordenadas>
+                    <longitud>-6.0700</longitud>
+                    <latitud>43.2000</latitud>
+                    <altitud>260</altitud>
+                </coordenadas>
+                <distancia unidades="km">20</distancia>
+                <galeriaFotos>
+                    <foto>multimedia/rutas/Entrago.jpg</foto>
+                </galeriaFotos>
+            </hito>
+        </hitos>
+        <planimetria>Senda_del_oso.kml</planimetria>
+        <altimetria>Senda_del_oso.svg</altimetria>
+    </ruta>
+</rutas>

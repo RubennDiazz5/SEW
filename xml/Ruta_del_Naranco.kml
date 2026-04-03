@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Inicio - Ruta del Naranco</name>
+      <description>
+            Recorrido cultural por los monumentos prerrománicos del Monte Naranco en Oviedo.
+        </description>
+      <Point>
+        <coordinates>-5.8448,43.3840,300</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ruta - Ruta del Naranco</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>-5.8465,43.3865,350
+-5.8475,43.3875,420
+-5.8485,43.3888,470
+-5.8492,43.3895,520
+-5.8510,43.3910,632
+-5.8490,43.3902,540
+-5.8470,43.3885,430
+-5.8455,43.3855,330</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>4</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,6 @@
+id_recurso,id_tipo,nombre,descripcion,ubicacion,precio,plazas_totales,activo
+1,1,Museo del Mar,Visita al museo marítimo con exposición permanente.,Gijón,12.50,30,1
+2,2,Ruta del Casco Histórico,Recorrido guiado por el centro histórico.,Oviedo,8.00,20,1
+3,3,Restaurante La Casona,Experiencia gastronómica con menú tradicional.,Cangas de Onís,25.00,40,1
+4,4,Hotel Costa Verde,Alojamiento de una noche con desayuno incluido.,Llanes,60.00,15,1
+5,5,Visita Guiada al Faro,Actividad cultural con guía especializado.,Tapia,10.00,18,1

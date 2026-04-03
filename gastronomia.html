@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asturias-Gastronomia</title>
+    <meta name="description" content="Documento con la informacion de gastronomia del proyecto Asturias-Desktop" />
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html" title="Inicio de la página web">Asturias Desktop</a></h1>
+
+        <nav>
+            <a href="index.html" title="Inicio de la página web">Inicio</a>
+            <a href="gastronomia.html" title="Gastronomia de la provincia" class="active">Gastronomia</a>
+            <a href="rutas.html" title="Rutas de la provincia">Rutas</a>
+            <a href="meteorologia.html" title="Meteorología de la provincia">Meteorología</a>
+            <a href="juego.html" title="Juego de la pagina web">Juego</a>
+            <a href="reservas.php" title="Reservas de la provincia">Reservas</a>
+            <a href="ayuda.html" title="">Ayuda</a>
+        </nav>
+    </header>
+
+    <p>Estás en: <a href="index.html" title="Inicio de la página web">Inicio</a> | <strong>Gastronomia</strong></p>
+
+    <main>
+        <section>
+            <h2>Platos más representativos:</h2>
+            <ol>
+                <li>Fabada asturiana</li>
+                <li>Cachopo</li>
+                <li>Pote asturiano</li>
+                <li>Arroz con leche</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Productos típicos asturianos:</h2>
+            <ul>
+                <li>Sidra natural</li>
+                <li>Chorizo asturiano</li>
+                <li>
+                    Quesos asturianos:
+                    <ul>
+                        <li>Cabrales</li>
+                        <li>Gamonéu</li>
+                        <li>Afuega'l Pitu</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Definiciones</h2>
+            <dl>
+                <dt>Fabada asturiana</dt>
+                <dd>Plato tradicional elaborado con fabes, chorizo, morcilla y tocino.</dd>
+
+                <dt>Sidra natural</dt>
+                <dd>Bebida fermentada de manzana típica de Asturias.</dd>
+
+                <dt>Cachopo</dt>
+                <dd>Filetes de ternera rellenos de jamón y queso, empanados y fritos.</dd>
+            </dl>
+        </section>
+
+        <table>
+            <caption>Tabla plato-ingrediente</caption>
+            <tr>
+                <th scope="col" id="plato">Plato</th>
+                <th scope="col" id="ingrediente">Ingrediente principal</th>
+            </tr>
+            <tr>
+                <td headers="plato">Fabada</td>
+                <td headers="ingrediente">Fabes</td>
+            </tr>
+            <tr>
+                <td headers="plato">Cachopo</td>
+                <td headers="ingrediente">Ternera</td>
+            </tr>
+            <tr>
+                <td headers="plato">Pote asturiano</td>
+                <td headers="ingrediente">Berza</td>
+            </tr>
+            <tr>
+                <td headers="plato">Cabrales</td>
+                <td headers="ingrediente">Leche de vaca, cabra y oveja</td>
+            </tr>
+        </table>
+
+        <section>
+            <h2>Imagen</h2>
+            <picture>
+                <source media="(max-width:465px)" srcset="multimedia/Imagen-movil.png">
+                <source media="(max-width:799px)" srcset="multimedia/Imagen-tablet.png">
+                <source media="(min-width:800px)" srcset="multimedia/Imagen.png">
+                <img src="multimedia/Imagen.png" alt="Foto escanciando sidra" />
+            </picture>
+        </section>
+
+        <section>
+            <h2>Vídeo</h2>
+            <video controls>
+                <source src="multimedia/Video.mp4" type="video/mp4" />
+                <source src="multimedia/Video.webm" type="video/webm" />
+            </video>
+        </section>
+
+        <section>
+            <h2>Audio</h2>
+            <audio controls>
+                <source src="multimedia/Audio.mp3" type="audio/mp3" />
+                <source src="multimedia/Audio.wav" type="audio/wav" />
+            </audio>
+        </section>
+    </main>
+</body>
+</html>

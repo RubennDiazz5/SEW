@@ -1,0 +1,94 @@
+/* Datos personales: Ruben Diaz Zapico uo283204 */
+/* Esquemas de posicionamiento del proyecto MotoGP-Desktop */
+
+/* Especificidad: 001 */
+header {
+    display: flex;                      /* Activa Flexbox */
+    justify-content: space-between;     /* Maximo espacio posible entre elementos */
+    align-items: center;                /* Alinea verticalmente en el centro */
+    padding: 1em;
+}
+
+/* Especificidad: 001 */
+nav {
+    display: flex;                      /* Activa Flexbox en los enlaces */
+    gap: 1em;                           /* Espacio entre enlaces */
+    flex-wrap: wrap;                    /* Permite que los enlaces se acomoden si no caben */
+}
+
+/* Especificidad: 012 */
+/* Mapa */
+article > div:first-of-type {
+    width: 50%;
+    height: 25rem;
+    background-color: #eaeaea;       /* Color por defecto */
+}
+
+/* Especificidad: 012 */
+/* Altimetría */
+article > section:nth-of-type(2) {
+    overflow-x: auto;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Especificidad: 013 */
+/* SVG */
+article > section:nth-of-type(2) svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Especificidad: 016 */
+/* Imágenes de los hitos */
+article > section:first-of-type section ul li img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.25rem;
+    display: block;
+}
+
+/* Especificidad: 014 */
+/* Quitar estilo de lista en fotos */
+article > section:first-of-type section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Especificidad: 015 */
+article > section:first-of-type section ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 799px) {
+    /* Especificidad: 001 */
+    header {
+        flex-direction: column;         /* Muestra en vertical */  
+        align-items: start;             /* Alinea verticalmente arriba, Genera warning al redefinir la propiedad align-items del header */
+    }
+
+    /* Especificidad: 001 */
+    nav {
+        flex-direction: column;         /* Muestra en vertical */
+    }
+
+    /* Especificidad: 012 */
+    body > p:first-of-type {
+        display: none;                  /* No muestra el contenido */
+    }
+
+    /* Especificidad: 001 */
+    video, audio {
+        width: 100%;
+    }
+
+    /* Especificidad: 003 */
+    article h2 + img {
+        width: 100%;       /* Ancho completo del contenedor */
+        height: auto;      /* Mantiene la proporción */
+        display: block;    /* Elimina espacio inferior por inline-block */
+        margin: 0 auto;    /* Centra la imagen si es necesario */
+    }
+}

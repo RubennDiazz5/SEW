@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Inicio - Senda del Oso</name>
+      <description>
+            Ruta cicloturista por antiguos trazados ferroviarios atravesando valles y túneles.
+        </description>
+      <Point>
+        <coordinates>-6.0100,43.2500,150</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ruta - Senda del Oso</name>
+      <LineString>
+        <extrude>1</extrude>
+        <tessellation>1</tessellation>
+        <coordinates>-5.9645,43.2730,70
+-5.9800,43.2650,90
+-5.9950,43.2500,120
+-6.0150,43.2500,140
+-6.0165,43.2515,145
+-6.0400,43.2400,170
+-6.0600,43.2300,220
+-6.0700,43.2000,260</coordinates>
+        <altitudeMode>relativeToGround</altitudeMode>
+      </LineString>
+      <Style>
+        <LineStyle>
+          <color>#ff0000ff</color>
+          <width>4</width>
+        </LineStyle>
+      </Style>
+    </Placemark>
+  </Document>
+</kml>
