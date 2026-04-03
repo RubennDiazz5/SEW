@@ -67,7 +67,7 @@ if (isset($_SESSION["id_usuario"])) {
     <meta charset="UTF-8" />
     <title>Reservas - Asturias Desktop</title>
     <meta name="description" content="Documento con la informacion de reservas del proyecto Asturias-Desktop" />
-    <meta name="keywords" content="reservas, turismo, asturias" />
+    <meta name="keywords" content="reservas turismo asturias, reservar actividades asturias, reservas online asturias, recursos turisticos asturias, reservar rutas asturias, reservar museos asturias, reservas hoteles asturias, turismo oviedo gijon llanes, gestion reservas asturias, sistema reservas turismo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
